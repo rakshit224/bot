@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini Advanced Chat</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        :root {
+            --background: #0a0a0a;
+            --foreground: #ffffff;
+            --muted: #6b7280;
+            --primary: #6366f1;
+            --border: #374151;
+            --banner-bg: #172554;
+            --bot-message: #18181b;
+            --user-message: #6366f1;
+            --error-message: #ef4444;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--background);
+            color: var(--foreground);
+            font-family: system-ui, Segoe UI, Roboto, sans-serif;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            background: var(--bot-message);
+        }
+
+        header h1 {
+            font-size: 1.5rem;
+        }
+
+        header h1 .advanced {
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        button {
+            background: transparent;
+            border: none;
+            color: var(--foreground);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .banner {
+            background: var(--banner-bg);
+            color: var(--foreground);
+            text-align: center;
+            padding: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .banner a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .banner button {
+            font-size: 1.2rem;
+        }
+
+        main {
+            max-width: 64rem;
+            margin: auto;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .chat-message {
+            padding: 0.75rem 1rem;
+            border-radius: 10px;
+            margin: 0.5rem 0;
+        }
+
+        .welcome {
+            background: linear-gradient(90deg, #3b82f6, #9333ea);
+            color: white;
+            font-weight: bold;
+            padding: 1rem;
+            border-radius: 10px;
+        }
+
+        #chat-container {
+            max-height: calc(100vh - 220px);
+            overflow-y: auto;
+            padding: 1rem;
+        }
+
+        .user-message {
+            background: var(--user-message);
+            color: white;
+            text-align: right;
+        }
+
+        .bot-message {
+            background: var(--bot-message);
+        }
+
+        .error-message {
+            background: var(--error-message);
+        }
+
+        .chat-input {
+            display: flex;
+            padding: 1rem;
+            border-top: 1px solid var(--border);
+        }
+
+        #user-input {
+            flex-grow: 1;
+            padding: 0.75rem;
+            border: 1px solid var(--border);
+            background: var(--bot-message);
+            color: var(--foreground);
+            border-radius: 5px;
+            outline: none;
+        }
+
+        #user-input:focus {
+            border-color: var(--primary);
+        }
+
+        #send-btn {
+            margin-left: 0.5rem;
+            padding: 0.75rem;
+            background: var(--primary);
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            main {
+                max-width: 100%;
+            }
+            header h1 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <button id="menu-btn" aria-label="Menu">☰</button>
+        <h1><span>Gemini</span> <span class="advanced">Advanced</span></h1>
+        <button id="notification-btn" aria-label="Notifications">🔔</button>
+    </header>
+    
+    <div class="banner" role="alert">
+        <p>New update available! <a href="#">Learn more</a></p>
+        <button id="close-banner" aria-label="Close">✕</button>
+    </div>
+    
+    <main>
+        <div id="chat-container">
+            <div class="chat-message welcome">Hello, Siddharth.</div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="user-input" placeholder="Type a message..." aria-label="Message input">
+            <button id="send-btn">Send</button>
+        </div>
+    </main>
+</body>
+</html>

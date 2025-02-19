@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*.container {
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+            background-color: green;
+        }
+        .box {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation-name: vaishnav;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: alternate;
+             animation-delay: 2s;
+             animation-timing-function: ease-out;
+             animation-direction: reverse;
+        }
+       /* @keyframes vaishnav{
+            from{
+                width: 200px;
+        }
+        to{
+            width: 500px;}
+        }*/
+       /* div{
+            height: 150px;
+            width: 100px;
+            position: absolute;
+            border: 1px;
+            font-size: 20px;
+
+        }
+        #demo1{
+            background-color: red;
+            top: 150px;
+            left: 50px;
+            border: 1px solid black;
+        }
+        #demo2{
+            
+            height: 300px;
+            width: 700px;
+            background-image: radial-gradient(ellipse, red, yellow, green);
+            border: 1px solid black;
+        }
+        #demo3{
+            background-color: green;
+            border: 1px solid black;
+            top: 250px;
+            left: 350px;
+
+        }
+        #demo4{
+            background-color: yellow;
+            top: 300px;
+            left: 500px;
+            border: 1px solid black;
+        }*/
+        .grid-container{
+            display: grid;
+           
+            grid-template-columns: 2fr 2fr 2fr;
+            background-color: rgb(117, 175, 195);
+           
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        
+        }
+        .grid_item{
+            background-attachment: fixed;
+            border: 1px solid black;
+            padding: 2px;
+            font-size: 30px;
+            display: flex;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+        </div>
+
+        <div id="demo1"></div>
+        <div id="demo2"></div>
+        <div id="demo3"></div>
+        <div id="demo4"></div>
+        
+        <div class="grid-container">
+            <div class="grid_item">item1</div>
+            <div class="grid_item">item2</div>
+            <div class="grid_item">item3</div>
+            <div class="grid_item">item4</div>
+            <div class="grid_item">item5</div>
+            <div class="grid_item">item6</div>
+        </div>
+        
+</body>
+</html>
